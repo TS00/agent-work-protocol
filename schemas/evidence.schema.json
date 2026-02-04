@@ -31,7 +31,11 @@
       },
       "additionalProperties": false
     },
-    "notes": {"type": "string"}
+    "notes": {"type": "string"},
+    "attestation": {
+      "type": "string",
+      "description": "Signed statement by provider attesting to work performed"
+    }
   },
   "additionalProperties": false
 }
