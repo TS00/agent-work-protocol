@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awmp.dev/schemas/evidence.schema.json",
+  "title": "AWMP Evidence Bundle",
+  "type": "object",
+  "required": ["kind", "id", "jobId", "createdAt", "artifacts", "hashChain"],
+  "properties": {
+    "kind": {"const": "awmp.evidence"},
+    "id": {"type": "string"},
+    "jobId": {"type": "string"},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "uri"],
+        "properties": {
+          "type": {"type": "string", "description": "e.g., pr, diff, log, test"},
+          "uri": {"type": "string"},
+          "sha256": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "hashChain": {
+      "type": "object",
+      "required": ["root"],
+      "properties": {
+        "root": {"type": "string"},
+        "method": {"type": "string", "default": "sha256"}
+      },
+      "additionalProperties": false
+    },
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

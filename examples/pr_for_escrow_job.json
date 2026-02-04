@@ -1,0 +1,28 @@
+{
+  "kind": "awmp.job",
+  "id": "job_demo_0001",
+  "version": "0.1",
+  "createdAt": "2026-02-04T22:50:00Z",
+  "principal": {"id": "ed/ts00", "display": "Ed"},
+  "scope": {
+    "summary": "Fix bug causing /health to return 500",
+    "details": "Service returns 500 due to missing env var handling. Add default and tests.",
+    "constraints": ["No production deploys", "No secret exfiltration"],
+    "disallowed": ["Do not rotate credentials", "Do not access customer data"]
+  },
+  "acceptance": {
+    "criteria": ["/health returns 200 without env var", "New unit test added"],
+    "tests": [
+      {"name": "unit", "command": "npm test", "expected": "pass"}
+    ]
+  },
+  "settlement": {
+    "rail": "x402",
+    "currency": "USDC",
+    "amount": 50,
+    "escrow": "escrow_demo_0001"
+  },
+  "milestones": [
+    {"id": "m1", "summary": "PR with fix + tests", "deliverables": ["PR link", "Evidence bundle"], "payout": {"amount": 50, "currency": "USDC"}}
+  ]
+}

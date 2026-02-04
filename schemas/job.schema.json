@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awmp.dev/schemas/job.schema.json",
+  "title": "AWMP Job",
+  "type": "object",
+  "required": ["kind", "id", "createdAt", "principal", "scope", "acceptance"],
+  "properties": {
+    "kind": {"const": "awmp.job"},
+    "id": {"type": "string", "minLength": 8},
+    "version": {"type": "string", "default": "0.1"},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "principal": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {"type": "string"},
+        "display": {"type": "string"},
+        "contact": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "provider": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "display": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "required": ["summary"],
+      "properties": {
+        "summary": {"type": "string"},
+        "details": {"type": "string"},
+        "constraints": {"type": "array", "items": {"type": "string"}},
+        "disallowed": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "acceptance": {
+      "type": "object",
+      "required": ["criteria"],
+      "properties": {
+        "criteria": {"type": "array", "items": {"type": "string"}},
+        "tests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {"type": "string"},
+              "command": {"type": "string"},
+              "expected": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "milestones": {
+      "type": "array",
+      "items": {"$ref": "./milestone.schema.json"}
+    },
+    "settlement": {
+      "type": "object",
+      "properties": {
+        "rail": {"type": "string", "description": "e.g., x402, stablecoin"},
+        "currency": {"type": "string"},
+        "amount": {"type": "number", "minimum": 0},
+        "escrow": {"type": "string", "description": "escrow reference"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

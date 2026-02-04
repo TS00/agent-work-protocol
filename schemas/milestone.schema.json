@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awmp.dev/schemas/milestone.schema.json",
+  "title": "AWMP Milestone",
+  "type": "object",
+  "required": ["id", "summary", "payout"],
+  "properties": {
+    "id": {"type": "string"},
+    "summary": {"type": "string"},
+    "deliverables": {"type": "array", "items": {"type": "string"}},
+    "payout": {
+      "type": "object",
+      "required": ["amount"],
+      "properties": {
+        "amount": {"type": "number", "minimum": 0},
+        "currency": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
