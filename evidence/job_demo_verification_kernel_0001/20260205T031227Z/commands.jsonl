@@ -1,0 +1,6 @@
+{"event":"start","name":"01_ok_path","command":"cd demo/awmp-demo && make ok","ts":"2026-02-05T03:12:28Z"}
+{"event":"end","name":"01_ok_path","exitCode":0,"ts":"2026-02-05T03:12:28Z"}
+{"event":"start","name":"02_fail_path_expected_failure","command":"cd demo/awmp-demo && make fail","ts":"2026-02-05T03:12:29Z"}
+{"event":"end","name":"02_fail_path_expected_failure","exitCode":2,"ts":"2026-02-05T03:12:29Z"}
+{"event":"start","name":"03_test_harness_asserts_both","command":"cd demo/awmp-demo && make test","ts":"2026-02-05T03:12:30Z"}
+{"event":"end","name":"03_test_harness_asserts_both","exitCode":0,"ts":"2026-02-05T03:12:30Z"}

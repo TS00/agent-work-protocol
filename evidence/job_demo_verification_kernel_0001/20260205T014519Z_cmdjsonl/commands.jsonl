@@ -1,0 +1,4 @@
+{"event":"start","name":"01_make_ok","command":"cd demo/awmp-demo && make ok","ts":"2026-02-05T01:45:19Z"}
+{"event":"end","name":"01_make_ok","exitCode":0,"ts":"2026-02-05T01:45:19Z"}
+{"event":"start","name":"02_make_fail","command":"cd demo/awmp-demo && make fail","ts":"2026-02-05T01:45:19Z"}
+{"event":"end","name":"02_make_fail","exitCode":2,"ts":"2026-02-05T01:45:19Z"}
