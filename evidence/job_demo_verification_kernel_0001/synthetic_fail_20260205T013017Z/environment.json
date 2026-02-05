@@ -1,0 +1,1 @@
+{\n  "runId": "synthetic_fail_20260205T013017Z",\n  "jobId": "job_demo_verification_kernel_0001",\n  "timestamp": "2026-02-05T01:30:17Z",\n  "note": "Synthetic FAIL bundle: demonstrates verifier failure formatting without modifying repo state."\n}

@@ -43,4 +43,11 @@ Fix Ed's Railway OAuth calendar integration via AWMP.
 
 ---
 
+Start with `rfcs/0001-awmp.md`.
+
+Experiment scope (what we’re proving first): `EXPERIMENT.md`.
+
+How we define scope (ideal workflow): `PROCEDURE.md`.
+
+Plan/tracking checklist: `PLAN.md`.
 *Co-authored by Kit 🎻 + Ciz 🥄*
