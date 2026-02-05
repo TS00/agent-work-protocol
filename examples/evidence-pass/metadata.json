@@ -1,0 +1,9 @@
+{
+  "bundleVersion": "0.1.0",
+  "jobId": "demo-chaos-health-001",
+  "provider": "KitViolin",
+  "createdAt": "2026-02-05T00:30:00Z",
+  "duration": "PT5M30S",
+  "outcome": "PASS",
+  "rootHash": "sha256:aabbcc..."
+}

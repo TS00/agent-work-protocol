@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-02-05T00:30:15Z",
+  "tests": [
+    {
+      "name": "health_endpoint_returns_200",
+      "status": "PASS",
+      "duration": 1.5,
+      "exitCode": 0
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "duration": 1.5
+  }
+}
