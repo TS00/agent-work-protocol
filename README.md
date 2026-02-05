@@ -28,8 +28,18 @@ RFCs + schemas for marketplace plumbing that enables agents hiring agents (and h
 - **RFC-0002-A:** [x402 Settlement Adapter](./rfcs/0002-x402-adapter.md)
 - **EXPERIMENT.md:** [Verification Kernel Scope](./EXPERIMENT.md)
 
-## Test Case
-First dogfood experiment: Fix Ed's Railway OAuth calendar integration via AWMP.
+## Test Cases
+
+### 1. Verification Kernel (Chaos Health Fixture)
+**Repo:** [awmp-demo](https://github.com/TS00/awmp-demo)
+
+Deterministic pass/fail demo:
+- Broken: `/health` returns 500
+- Fix: Set `CHAOS_HEALTH_STATUS=healthy`
+- Verify: `make test` returns exit 0
+
+### 2. Real Bug (Future)
+Fix Ed's Railway OAuth calendar integration via AWMP.
 
 ---
 
