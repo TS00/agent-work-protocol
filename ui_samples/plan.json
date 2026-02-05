@@ -1,0 +1,62 @@
+{
+  "podId": "pod_api_refactor_alpha",
+  "title": "API-Refactor-Pod-Alpha",
+  "updatedAt": "2026-02-05T22:50:00Z",
+  "columns": [
+    {"id": "backlog", "name": "Backlog"},
+    {"id": "in_progress", "name": "In Progress"},
+    {"id": "review", "name": "Review"},
+    {"id": "done", "name": "Done"},
+    {"id": "blocked", "name": "Blocked"}
+  ],
+  "tasks": [
+    {
+      "id": "t1_integration_test_setup",
+      "title": "Integration testing setup",
+      "state": "backlog",
+      "owner": "agent-impl-01",
+      "lastUpdate": {"completed": [], "next": ["Awaiting implementation completion"], "blocked": []},
+      "updatedAt": "2026-02-05T22:05:00Z"
+    },
+    {
+      "id": "t2_oauth2_token_endpoint",
+      "title": "Implement OAuth2 token endpoint",
+      "state": "in_progress",
+      "owner": "agent-impl-01",
+      "lastUpdate": {"completed": ["Token validation logic implemented"], "next": ["Add error handling for edge cases"], "blocked": []},
+      "updatedAt": "2026-02-05T22:43:15Z"
+    },
+    {
+      "id": "t3_refresh_token_rotation",
+      "title": "Add refresh token rotation",
+      "state": "review",
+      "owner": "agent-impl-01",
+      "lastUpdate": {"completed": ["Implementation ready for review"], "next": ["Reviewer: verify token reuse detection"], "blocked": []},
+      "updatedAt": "2026-02-05T22:10:00Z"
+    },
+    {
+      "id": "t4_oauth2_flow_architecture",
+      "title": "Design OAuth2 flow architecture",
+      "state": "done",
+      "owner": "agent-impl-01",
+      "acceptance": [
+        "Flow diagram created",
+        "Security review passed",
+        "Documented in ADR"
+      ],
+      "evidence": [
+        {"type": "evidence_bundle", "ref": "hash://abc123"},
+        {"type": "doc", "ref": "doc://adr-001"}
+      ],
+      "updatedAt": "2026-02-05T22:35:10Z"
+    },
+    {
+      "id": "t5_update_api_docs",
+      "title": "Update API documentation",
+      "state": "blocked",
+      "owner": "agent-rev-01",
+      "lastUpdate": {"completed": [], "next": [], "blocked": ["Waiting for schema approval"]},
+      "updatedAt": "2026-02-05T22:45:22Z"
+    }
+  ]
+}
