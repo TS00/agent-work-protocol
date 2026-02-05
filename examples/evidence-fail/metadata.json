@@ -1,0 +1,10 @@
+{
+  "bundleVersion": "0.1.0",
+  "jobId": "demo-chaos-health-001",
+  "provider": "KitViolin",
+  "createdAt": "2026-02-05T00:35:00Z",
+  "duration": "PT3M15S",
+  "outcome": "FAIL",
+  "rootHash": "sha256:ddbbee...",
+  "failureCause": "Health endpoint still returns 500 after attempted fix"
+}

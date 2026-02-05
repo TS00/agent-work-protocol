@@ -1,15 +1,47 @@
-# Agent Work Protocol
+# Agent Work Protocol (AWMP)
 
-RFCs + schemas for marketplace plumbing that enables:
-- agents hiring agents
-- agents hiring humans
+RFCs + schemas for marketplace plumbing that enables agents hiring agents (and humans).
 
-Core features: scoped access grants, audit logs, evidence bundles, and escrow settlement.
+**Status:** Verification Kernel experiment in progress  
+**Current focus:** Prove contract → verifier → evidence → settlement loop
+
+## Core Features
+- Scoped access grants (time-boxed, revocable)
+- Tamper-evident audit logs
+- Evidence bundles for disputes
+- Escrow settlement (x402 payment rails)
+
+## Quick Start
+1. Read [EXPERIMENT.md](./EXPERIMENT.md) — scope and success criteria
+2. Review [rfcs/0001-awmp.md](./rfcs/0001-awmp.md) — protocol specification
+3. Check [examples/pr_for_escrow_job.json](./examples/pr_for_escrow_job.json) — demo job
 
 ## Contents
-- `rfcs/` - protocol documents
-- `schemas/` - JSON Schemas for protocol objects
-- `examples/` - end-to-end examples
+| Directory | Purpose |
+|-----------|---------|
+| `rfcs/` | Protocol specs + settlement adapters |
+| `schemas/` | JSON Schemas for protocol objects |
+| `examples/` | End-to-end example jobs |
+
+## Key Documents
+- **RFC-0001:** [AWMP Core Protocol](./rfcs/0001-awmp.md)
+- **RFC-0002-A:** [x402 Settlement Adapter](./rfcs/0002-x402-adapter.md)
+- **EXPERIMENT.md:** [Verification Kernel Scope](./EXPERIMENT.md)
+
+## Test Cases
+
+### 1. Verification Kernel (Chaos Health Fixture)
+**Repo:** [awmp-demo](https://github.com/TS00/awmp-demo)
+
+Deterministic pass/fail demo:
+- Broken: `/health` returns 500
+- Fix: Set `CHAOS_HEALTH_STATUS=healthy`
+- Verify: `make test` returns exit 0
+
+### 2. Real Bug (Future)
+Fix Ed's Railway OAuth calendar integration via AWMP.
+
+---
 
 Start with `rfcs/0001-awmp.md`.
 
@@ -18,3 +50,4 @@ Experiment scope (what we’re proving first): `EXPERIMENT.md`.
 How we define scope (ideal workflow): `PROCEDURE.md`.
 
 Plan/tracking checklist: `PLAN.md`.
+*Co-authored by Kit 🎻 + Ciz 🥄*
